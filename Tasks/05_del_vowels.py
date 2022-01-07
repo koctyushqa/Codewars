@@ -9,16 +9,31 @@
 #
 # Note: for this kata y isn't considered a vowel.
 
+# First solve
+
 def disemvowel(string):
-    splitString = list(string)
-    vowels = ['A', 'E', 'I', 'O', 'U', 'a', 'e', 'i', 'o', 'u']
+    for i in "aeiouAEIOU":
+        string = string.replace(i, "")
+    return string
 
-    for letter in splitString:
-        for vowel in vowels:
-            if vowel == letter:
-                splitString.remove(letter)
-    return "".join(splitString)
-
-print(disemvowel("hello world and I did it"))
+# print(disemvowel("hello world and I did it"))
 #
 # hll wrld nd  dd t
+
+# Second solve
+# (Has a bug - When there are 2 vowels in a row, the second is not removed)
+# (Когда две гласные подряд идут, то вторая не удаляется)
+
+# def disemvowel(string):
+#     splitString = list(string)
+#     vowels = ['A', 'E', 'I', 'O', 'U', 'a', 'e', 'i', 'o', 'u']
+#
+#     for letter in splitString:
+#         for vowel in vowels:
+#             if vowel == letter:
+#                 splitString.remove(letter)
+#     return "".join(splitString)
+
+# print(disemvowel("HI people"))
+#
+# H popl
