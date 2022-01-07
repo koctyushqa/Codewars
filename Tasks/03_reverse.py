@@ -6,6 +6,6 @@
 def solution(string):
     return string[::-1]
 
-print(solution("hello world"))
+# print(solution("hello world"))
 #
 # dlrow olleh
