@@ -4,7 +4,7 @@
 # 'word'   =>  'drow'
 
 def solution(string):
-    return (string[::-1])
+    return string[::-1]
 
 print(solution("hello world"))
 #
